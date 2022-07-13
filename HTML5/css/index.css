@@ -1,12 +1,18 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.4/dist/web/static/pretendard.css');
 @import url('./normalize.css');
-@import url('./reset.css');
+/* @import url('./reset.css'); */
 
 /* 기본 스타일 */
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+/* 링크 스타일 */
+a {
+	color: inherit;
+	text-decoration: none;
 }
 
 /* 본문 스타일 */
@@ -16,7 +22,7 @@ body {
 		'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
 		sans-serif;
 	font-weight: 400;
-	background: #fff;
+	background: #ccc;
 	color: #181818;
 }
 
@@ -32,7 +38,31 @@ body {
 
 /* 헤더 */
 .header {
-	background: aqua;
+	position: relative;
+	padding: 8px 30px 50px;
+	background: #fff;
+	min-height: 20vh;
+}
+
+/* 로고 */
+.logo {
+	position: absolute;
+	top: 45px;
+	left: 65px;
+}
+
+/* 멤버 링크*/
+.member {
+	text-align: right;
+	transform: trnaslateX(8px);
+}
+.member li {
+	text-transform: uppercase;
+	display: inline-block;
+}
+.member a {
+	display: inline-block;
+	padding: 8px;
 }
 
 /* 비주얼 */
