@@ -356,40 +356,57 @@ body {
 
 /* 웹표준 */
 .term {
-	background: #aaa radial-gradient(circle at right top, #aaa, #eee);
-	margin-top: 25px;
+	background: #aaa linear-gradient(to bottom, #999, #eee);
+	margin-top: 20px;
 	padding: 15px;
 	border: 1px solid #aaa;
 	border-radius: 10px;
 }
 
 .term-title {
-	margin-bottom: 10px;
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 700;
 }
-
+.term-list {
+	margin-top: 15px;
+	background-color: #fff;
+}
 .term-list > div {
 	display: flow-root;
+	margin-top: 10px;
 }
-.term-list-subject {
+.odd .term-list-thumbnail {
+	float: left;
+}
+.odd .term-list-subject,
+.odd .term-list-brief {
 	float: right;
-	width: 65%;
-	padding-bottom: 5px;
-	color: #57798d;
-	font-weight: 800;
-	font-size: 1.1em;
+}
+.even .term-list-thumbnail {
+	float: right;
+}
+.even .term-list-subject,
+.even .term-list-brief {
+	float: left;
+}
+
+.term-list-subject {
+	width: 145px;
+	color: #296897;
 }
 
 .term-list-thumbnail {
-	float: left;
-	width: 60px;
+	position: relative;
+	top: 2px;
+}
+.term-list-thumbnail img {
+	vertical-align: top;
 }
 
 .term-list-brief {
-	float: right;
-	width: 65%;
-	font-weight: 500;
+	margin-top: 5px;
+	line-height: 1.5;
+	width: 145px;
 }
 
 /* 슬로건 */
