@@ -356,19 +356,40 @@ body {
 
 /* 웹표준 */
 .term {
-	background: url('./images/validation_icon.png') no-repeat 20px 50% / 16px 16px,
-		#aaa linear-gradient(to bottom, #ccc, #aaa);
+	background: #aaa radial-gradient(circle at right top, #aaa, #eee);
+	margin-top: 25px;
+	padding: 15px;
+	border: 1px solid #aaa;
 	border-radius: 10px;
-	margin-top: 20px;
-	padding: 20px;
 }
+
 .term-title {
-	font-size: 1.6rem;
-	font-weight: 800;
 	margin-bottom: 10px;
+	font-size: 1.6rem;
+	font-weight: 700;
 }
-.term p {
-	text-overflow: ellipsis;
+
+.term-list > div {
+	display: flow-root;
+}
+.term-list-subject {
+	float: right;
+	width: 65%;
+	padding-bottom: 5px;
+	color: #57798d;
+	font-weight: 800;
+	font-size: 1.1em;
+}
+
+.term-list-thumbnail {
+	float: left;
+	width: 60px;
+}
+
+.term-list-brief {
+	float: right;
+	width: 65%;
+	font-weight: 500;
 }
 
 /* 슬로건 */
