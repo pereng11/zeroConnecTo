@@ -329,6 +329,36 @@ body {
 	color: #ed552f;
 }
 
+/* 유효성 */
+.validation {
+	/* background: red; */
+}
+.validation ul {
+	padding: 0;
+}
+.validation-banner {
+	background: #e8852e radial-gradient(circle at right top, #aaa, #fff);
+	margin: 10px 0;
+	border: 1px solid #aaa;
+	border-radius: 50px;
+	text-align: center;
+}
+.validation-link {
+	display: block;
+	width: 100%;
+	padding: 10px;
+	background: transparent;
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+.validation-link::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url('./images/validation_icon.png');
+}
+
 /* 슬로건 */
 .slogan {
 	background: greenyellow;
