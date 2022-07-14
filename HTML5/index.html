@@ -143,30 +143,42 @@
 		<main class="main">
 			<div class="group group1">
 				<section class="login">
-					<h2 class="title">로그인</h2>
-					<div class="login-content">
-						<form action="/" class="login-form">
-							<label for="login-input-email">아이디 </label>
-							<input
-								id="login-input-email"
-								type="email"
-								placeholder="이메일 주소"
-								class="login-input"
-							/>
-							<label for="login-input-password"> 비밀번호 </label>
-							<input
-								id="login-input-password"
-								type="password"
-								placeholder="8자리 이상"
-								class="login-input"
-							/>
-							<button class="login-button">로그인</button>
-						</form>
-						<div class="login-link">
-							<a href="/">회원가입</a>
-							<a href="/">아이디/비밀번호 찾기</a>
-						</div>
-					</div>
+					<h2 class="login-title">로그인</h2>
+					<form
+						method="POST"
+						action="https://formspree.io/seulbinim@gmail.com"
+						class="login-form"
+					>
+						<fieldset>
+							<legend>회원 로그인 폼</legend>
+							<div class="user-email">
+								<label for="userEmail">아이디</label>
+								<input
+									type="email"
+									id="userEmail"
+									placeholder="guest@zerobase.com"
+									required="required"
+								/>
+							</div>
+							<div class="user-pwd">
+								<label for="userPwd">아이디</label>
+								<input
+									type="password"
+									id="userPwd"
+									required="required"
+									placeholder="8자리 이상"
+									minlength="8"
+								/>
+							</div>
+							<button type="submit" class="login-button">로그인</button>
+						</fieldset>
+					</form>
+					<ul class="sign">
+						<li><a class="icon-right-open" href="/">회원가입</a></li>
+						<li>
+							<a class="icon-right-open" href="/">아이디/비밀번호 찾기</a>
+						</li>
+					</ul>
 				</section>
 			</div>
 			<div class="group group2">그룹2</div>
