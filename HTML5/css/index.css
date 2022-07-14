@@ -329,34 +329,28 @@ body {
 	color: #ed552f;
 }
 
-/* 유효성 */
-.validation {
-	/* background: red; */
+/* 유효성 검사 배너 */
+.validation-list {
+	margin-top: 25px;
+	border-top: 1px solid transparent;
 }
-.validation ul {
-	padding: 0;
+.validation-list li {
+	margin-top: 10px;
 }
-.validation-banner {
-	background: #e8852e radial-gradient(circle at right top, #aaa, #fff);
-	margin: 10px 0;
-	border: 1px solid #aaa;
-	border-radius: 50px;
-	text-align: center;
-}
-.validation-link {
+
+.validation-list a {
+	background: url('./images/validation_icon.png') no-repeat 20px 50% / 16px 16px,
+		#aaa linear-gradient(to bottom, #ccc, #aaa);
+	background-color: #aaa;
 	display: block;
-	width: 100%;
 	padding: 10px;
-	background: transparent;
-	font-size: 1.5rem;
-	font-weight: 600;
+	padding-left: 45px;
+	border-radius: 50px;
 }
-.validation-link::before {
-	content: '';
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	background: url('./images/validation_icon.png');
+.validation-list a:hover,
+.validation-list a:focus {
+	color: #f00;
+	background-size: 14px 14px, 100%;
 }
 
 /* 슬로건 */
