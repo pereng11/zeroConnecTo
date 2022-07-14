@@ -240,6 +240,7 @@ body {
 /* 그룹 */
 .group {
 	float: left;
+	margin: 0 15px;
 }
 
 .group1 {
@@ -351,6 +352,23 @@ body {
 .validation-list a:focus {
 	color: #f00;
 	background-size: 14px 14px, 100%;
+}
+
+/* 웹표준 */
+.term {
+	background: url('./images/validation_icon.png') no-repeat 20px 50% / 16px 16px,
+		#aaa linear-gradient(to bottom, #ccc, #aaa);
+	border-radius: 10px;
+	margin-top: 20px;
+	padding: 20px;
+}
+.term-title {
+	font-size: 1.6rem;
+	font-weight: 800;
+	margin-bottom: 10px;
+}
+.term p {
+	text-overflow: ellipsis;
 }
 
 /* 슬로건 */
