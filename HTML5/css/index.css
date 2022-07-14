@@ -232,12 +232,14 @@ body {
 .main {
 	display: flow-root;
 	padding: 30px 15px;
+	background: #fff;
+	border-radius: 15px 15px 0 0;
+	min-height: 400px;
 }
 
 /* 그룹 */
 .group {
 	float: left;
-	background: cornflowerblue;
 }
 
 .group1 {
@@ -248,6 +250,75 @@ body {
 }
 .group3 {
 	width: 190px;
+}
+
+/* 로그인 */
+.login {
+	background: orange;
+	padding: 10px;
+	border-radius: 5px;
+}
+.login-title {
+	color: #fffb1f;
+	font-size: 1.1em;
+	font-weight: 700;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+.login-form {
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px 5px 0 0;
+}
+.login-form::after {
+	content: '';
+	display: block;
+	background-color: #404040;
+	height: 2px;
+	margin: 0 auto 0;
+	margin-top: 10px;
+}
+.login fieldset {
+	position: relative;
+	padding-right: 55px;
+}
+.login fieldset > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+#userEmail,
+#userPwd {
+	width: 100px;
+}
+
+.user-email {
+	padding-bottom: 5px;
+}
+
+.login-button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50px;
+	height: 100%;
+	font-size: 0.9em;
+	font-weight: 700;
+	border: none;
+	color: #fff;
+	background-color: orangered;
+	border-radius: 5px;
+}
+
+.sign {
+	background: #fff;
+	display: flex;
+	justify-content: flex-end;
+	padding: 10px;
+	border-radius: 0 0 5px 5px;
+}
+.sign li {
+	margin-left: 2px;
 }
 
 /* 슬로건 */
