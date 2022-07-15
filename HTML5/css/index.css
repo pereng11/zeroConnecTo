@@ -409,6 +409,38 @@ body {
 	width: 145px;
 }
 
+/* 검색 폼 */
+.search-form {
+	background-color: lime;
+	padding: 16px;
+	border: 1px solid #000;
+	border-radius: 15px 15px 0 0;
+	border-bottom: none;
+}
+#search-title {
+	display: block;
+	width: 16px;
+}
+#search-title:before {
+	content: '\e802';
+	font-family: 'fontello';
+	padding-right: 5px;
+}
+
+#search-input {
+	padding: 5px;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+
+.search-button {
+	padding: 5px 10px;
+	background-color: #181818;
+	color: #fff;
+	border-radius: 5px;
+	margin-left: 10px;
+}
+
 /* 슬로건 */
 .slogan {
 	background: greenyellow;
