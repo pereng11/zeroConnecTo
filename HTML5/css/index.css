@@ -376,7 +376,6 @@ body {
 }
 .term-list {
 	margin-top: 15px;
-	background-color: #fff;
 }
 .term-list > div {
 	display: flow-root;
@@ -459,34 +458,34 @@ body {
 .board {
 	margin-top: 20px;
 	position: relative;
-	background: yellow;
-	height: 214px;
-}
-.board-section {
-	display: inline-block;
+	padding-top: 30px;
+	min-height: 214px;
 }
 .board-tab {
-	float: left;
+	position: absolute;
+	top: 0;
 	border: 1px solid #aaa;
 	border-radius: 5px 5px 0 0;
 	background-color: #ccc;
 	padding: 10px 15px;
 	color: #666;
 }
+.notice-tab {
+	left: 0;
+}
+.archive-tab {
+	left: 80px;
+}
 
 .board-section.is-select .board-tab {
 	background: #fff;
 	color: #ed552f;
 	border-color: currentColor currentColor #fff currentColor;
+	z-index: 10;
 }
 
 .board-panel {
 	display: none;
-	position: absolute;
-	/* background: pink; */
-	width: 100%;
-	top: 45px;
-	left: 0;
 }
 
 .board-section.is-select .board-panel {
