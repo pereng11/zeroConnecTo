@@ -53,17 +53,26 @@ body {
 }
 
 /* 스킵 네비게이션 */
-.skip-nav a {
-	padding: 4px 0;
-	opacity: 0;
-	flex-flow: row nowrap;
+.skip-nav {
+	display: block;
+	text-align: center;
 	background: #000;
 	color: #fff;
-	justify-content: center;
-	padding: 8px;
+	line-height: 0;
+	font-size: 0;
 }
-.skip-nav a:focus {
-	display: flex;
+.skip-nav span {
+	display: inline-block;
+	padding: 0;
+	height: 0;
+	overflow: hidden;
+}
+.skip-nav:focus span {
+	height: auto;
+	padding: 8px;
+	font-size: 1.5rem;
+	line-height: 1;
+	box-shadow: 1px 1px 0 0 red, -1px -1px 0 0 red;
 }
 
 /* 레이아웃 */
@@ -707,12 +716,10 @@ body {
 	position: relative;
 }
 .favorite-list {
-	background-color: yellow;
 	margin-top: 10px;
 	list-style-type: none;
 }
 .favorite-list li {
-	background: pink;
 	margin-top: 8px;
 	counter-increment: number;
 	position: relative;
@@ -731,11 +738,9 @@ body {
 }
 
 .favorite-list a {
-	background: lime;
 	vertical-align: middle;
 }
 .favorite-list em {
-	background-color: mediumaquamarine;
 	position: absolute;
 	top: 50%;
 	right: 0;
@@ -761,7 +766,26 @@ body {
 
 /* 슬로건 */
 .slogan {
-	background: greenyellow;
+	padding-top: 20px;
+	padding-left: 20px;
+	background: #fff;
+}
+.slogan-title {
+	float: left;
+	color: transparent;
+	width: 110px;
+	height: 80px;
+	background: #fff url(./images/coffee.png);
+}
+.slogan-content {
+	padding: 0 40px 0 130px;
+	color: #aaa;
+	font-size: 1.1em;
+	font-weight: 600;
+	line-height: 2;
+}
+.slogan-content q::after {
+	content: '';
 }
 
 /* 푸터 */
