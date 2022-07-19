@@ -598,7 +598,8 @@ body {
 	color: #d16527;
 }
 .event-title,
-.related-title {
+.related-title,
+.favorite-title {
 	font-size: 1.5rem;
 	font-weight: 700;
 }
@@ -684,6 +685,72 @@ body {
 	display: block;
 	padding: 0 0 0 20px;
 	line-height: 25px;
+}
+
+/* 인기사이트 */
+.favorite {
+	margin-top: 20px;
+	position: relative;
+}
+.favorite-list {
+	margin-top: 10px;
+	list-style-type: none;
+}
+.favorite-list li {
+	position: relative;
+	margin-top: 8px;
+}
+.favorite-list a {
+	display: inline-block;
+	/* margin-top: 8px; */
+	width: 80%;
+}
+.favorite-list li em {
+	position: absolute;
+	top: 25%;
+	right: 0;
+	display: inline-block;
+	width: 10px;
+	height: 11px;
+	background-image: url(./images/rank.png);
+	background-repeat: no-repeat;
+}
+.stop {
+	background-position: 0 -20px;
+}
+.down {
+	background-position: 0 -45px;
+}
+
+.no1::before,
+.no2::before,
+.no3::before,
+.no4::before {
+	content: '1';
+	color: #fff;
+	background: #aaa;
+	display: inline-block;
+	width: 20px;
+	text-align: center;
+	padding: 2px 5px;
+	border-radius: 2px;
+	margin: 0;
+}
+.no2::before {
+	content: '2';
+}
+.no3::before {
+	content: '3';
+}
+.no4::before {
+	content: '4';
+}
+
+.favorite-more {
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	padding: 8px;
 }
 
 /* 슬로건 */
