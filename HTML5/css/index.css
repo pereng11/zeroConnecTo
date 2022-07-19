@@ -581,7 +581,7 @@ body {
 	margin-top: 10px;
 	text-align: justify;
 }
-/* 신규 이벤트 및 관련 사이트 */
+/* 신규 이벤트  */
 .gradient-effect {
 	background: #ccc radial-gradient(circle at left bottom, #fff, #ccc);
 	padding: 10px;
@@ -597,7 +597,8 @@ body {
 .accent-color {
 	color: #d16527;
 }
-.event-title {
+.event-title,
+.related-title {
 	font-size: 1.5rem;
 	font-weight: 700;
 }
@@ -657,37 +658,32 @@ body {
 	border: 1px solid #aaa;
 	box-shadow: 5px 5px 0 0 #bbb;
 }
+
+/* 관련사이트 */
+
 .related {
-	margin-top: 10px;
-}
-.related-title {
-	font-size: 1.5rem;
-	font-weight: 700;
+	padding-top: 10px;
 }
 .related-list {
 	margin-top: 10px;
-	height: 27px;
 	border: 1px solid #aaa;
 	background-color: #fff;
+	border-radius: 5px;
+	height: 27px;
 	overflow: hidden;
-	transition: padding 200ms ease-out;
+	transition: height 400ms, padding 400ms 200ms;
 }
 .related-list:hover,
-.related-list:active,
 .related-list:focus {
-	height: 157px;
+	height: 147px;
 	padding: 10px 0;
 }
-.related-list li:hover,
-.related-list li:active,
-.related-list li:focus {
-	background-color: #ccc;
+.related-list li {
 }
 .related-list a {
 	display: block;
-	line-height: 27px;
-	font-weight: 500;
-	padding: 0 20px;
+	padding: 0 0 0 20px;
+	line-height: 25px;
 }
 
 /* 슬로건 */
