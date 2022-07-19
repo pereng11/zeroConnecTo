@@ -55,25 +55,25 @@ body {
 
 /* 스킵 네비게이션 */
 .skip-nav {
-	display: block;
+	position: absolute;
+	width: 100%;
 	text-align: center;
+	padding: 4px 0;
 	background: #000;
 	color: #fff;
-	line-height: 0;
-	font-size: 0;
+	z-index: 10;
+	transform: translateY(-110%);
+	transition: all 250ms;
+}
+.skip-nav:focus {
+	outline: none;
+	transform: translateY(0%);
 }
 .skip-nav span {
 	display: inline-block;
-	padding: 0;
-	height: 0;
-	overflow: hidden;
-}
-.skip-nav:focus span {
-	height: auto;
 	padding: 8px;
-	font-size: 1.5rem;
-	line-height: 1;
-	box-shadow: 1px 1px 0 0 red, -1px -1px 0 0 red;
+	border: 2px solid #e32841;
+	border-radius: 4px;
 }
 
 /* 레이아웃 */
