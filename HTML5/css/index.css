@@ -657,6 +657,38 @@ body {
 	border: 1px solid #aaa;
 	box-shadow: 5px 5px 0 0 #bbb;
 }
+.related {
+	margin-top: 10px;
+}
+.related-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.related-list {
+	margin-top: 10px;
+	height: 27px;
+	border: 1px solid #aaa;
+	background-color: #fff;
+	overflow: hidden;
+	transition: padding 200ms ease-out;
+}
+.related-list:hover,
+.related-list:active,
+.related-list:focus {
+	height: 157px;
+	padding: 10px 0;
+}
+.related-list li:hover,
+.related-list li:active,
+.related-list li:focus {
+	background-color: #ccc;
+}
+.related-list a {
+	display: block;
+	line-height: 27px;
+	font-weight: 500;
+	padding: 0 20px;
+}
 
 /* 슬로건 */
 .slogan {
