@@ -581,6 +581,52 @@ body {
 	margin-top: 10px;
 	text-align: justify;
 }
+/* 이벤트 */
+.gradient-effect {
+	background: #aaa linear-gradient(to bottom, #fff, #ccc);
+	padding: 15px;
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	width: 192px;
+}
+.event {
+	position: relative;
+}
+.event-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.accent-color {
+	color: #e8852e;
+}
+.event-button-wrapper {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.event-button-prev,
+.event-button-next {
+	color: transparent;
+	background: url(./images/back_forward.png) no-repeat;
+	width: 18px;
+	height: 18px;
+	border: none;
+}
+.event-button-next {
+	background-position: -36px 0;
+}
+#eventDetail {
+	text-align: center;
+	margin-top: 10px;
+}
+.event-thumbnail img {
+	width: 100%;
+}
+.event-brief {
+	padding: 15px 0;
+	border-bottom: 1px solid #aaa;
+}
+/* 관련사이트 */
 
 /* 슬로건 */
 .slogan {
