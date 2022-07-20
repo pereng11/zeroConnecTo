@@ -774,8 +774,8 @@ body {
 	position: absolute;
 	left: 35px;
 	bottom: -25px;
-	width: 110px;
-	height: 83px;
+	width: 120px;
+	height: 93px;
 	text-align: center;
 	line-height: 83px;
 }
@@ -812,5 +812,39 @@ body {
 	height: 200px;
 }
 .footer-inner {
-	background: orange;
+	display: grid;
+	grid-template-columns: 130px 700px 130px;
+	padding: 20px 0;
+}
+.footer-logo {
+	grid-column: 1;
+	grid-row: 1 / 3;
+	width: 150px;
+}
+.guide-list {
+	grid-column: 2;
+	grid-row: 1;
+	display: flex;
+	background-color: rgba(123, 131, 133, 1);
+	border-radius: 50px;
+	color: #fff;
+	justify-content: space-around;
+	padding: 10px;
+}
+.guide-list a {
+	padding: 10px;
+}
+.address {
+	grid-column: 2;
+	grid-row: 2;
+	margin-top: 10px;
+}
+.copyright {
+	grid-column: 2;
+	grid-row: 3;
+}
+.badge-container {
+	grid-column: 3;
+	grid-row: 1 / 3;
+	margin-left: auto;
 }
