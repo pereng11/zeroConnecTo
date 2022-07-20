@@ -21,37 +21,53 @@
 	</head>
 
 	<body>
-		<header>
-			<h1><a href="/" class="logo"></a></h1>
-			<ul class="navigation-list">
-				<li class="navigation-item">
-					<a href="" class="navigation-link">로그인</a>
-					<span aria-hidden="true">|</span>
+		<header class="appHeader">
+			<h1 class="logo">
+				<a href="./main.html" class="logo__link" aria-label="Web Cafe"></a>
+			</h1>
+			<ul class="memberOnly">
+				<li><a href="/">로그인</a></li>
+				<li>
+					<span class="divider" aria-hidden="true">ㅣ</span
+					><a href="/">회원가입</a>
 				</li>
-				<li class="navigation-item">
-					<a href="" class="navigation-link">회원가입</a>
-					<span aria-hidden="true">|</span>
-				</li>
-				<li class="navigation-item">
-					<a href="" class="navigation-link">커뮤니티</a>
+				<li>
+					<span class="divider" aria-hidden="true">ㅣ</span
+					><a href="/">커뮤니티</a>
 				</li>
 			</ul>
-			<form method="post" action="/" class="search-form">
+			<form
+				action="https://formspree.io/seulbinim@gmail.com"
+				method="POST"
+				class="searchForm"
+			>
 				<fieldset>
-					<legend>검색 폼</legend>
-					<label for="searchInput">
-						<input
-							type="search"
-							id="searchInput"
-							required="required"
-							placeholder="검색어를 입력하세요."
-							name="search"
-						/>
-					</label>
-					<button class="search-button" type="submit">검색</button>
+					<legend>검색</legend>
+					<div class="searchForm__group">
+						<div class="formInput">
+							<label for="search" class="a11yHidden formInput__label"
+								>검색어</label
+							>
+							<input
+								id="search"
+								class="formInput__input"
+								type="search"
+								required
+								placeholder="검색어를 입력하세요."
+								name="search"
+							/>
+						</div>
+						<button type="submit" class="button button--fill button--primary">
+							검색
+						</button>
+					</div>
 				</fieldset>
 			</form>
-			<button type="button" class="toggle hamburger"></button>
+			<button class="buttonNone button--burger" aria-label="메뉴 열기">
+				<span class="button--burgerBarTop"></span>
+				<span class="button--burgerBarMiddle"></span>
+				<span class="button--burgerBarBottom"></span>
+			</button>
 		</header>
 	</body>
 </html>
