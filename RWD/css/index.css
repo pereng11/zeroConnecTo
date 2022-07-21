@@ -86,7 +86,18 @@ input[type='search'] {
 	color: var(--secondary-color);
 	border: 1px solid currentColor;
 }
-.button--burger {
+/* 공통 앱 네비게이션 */
+.appNavigation {
+	background-color: var(--secondary-color);
+}
+.menu__list {
+	padding: var(--spacing-base) var(--spacing-md);
+}
+.menu__link {
+	display: block;
+	background-color: red;
+	width: 100%;
+	padding: var(--spacing-sm);
 }
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
@@ -154,39 +165,25 @@ input[type='search'] {
 		top: 50%;
 		transform: translateY(-50%) rotate(-45deg);
 	}
-
-	/* .button--burger.is-active .button--burgerBarTop {
-		transform: translateY(200%) rotate(45deg);
+	/* 모바일 앱 네비게이션 */
+	.appNavigation {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: #aed57c;
 	}
-	.button--burger.is-active .button--burgerBarMiddle {
-		width: 0;
+	.menu__list {
+		width: 75vw;
+		height: 100vh;
+		padding: var(--spacing-xl);
 	}
-	.button--burger.is-active .button--burgerBarBottom {
-		transform: translateY(-200%) rotate(-45deg);
-	} */
-	@keyframes burgerTop {
-		0% {
-			transform: translateY(0%) rotate(0deg);
-		}
-		100% {
-			transform: translateY(200%) rotate(45deg);
-		}
-	}
-	@keyframes burgerMiddle {
-		0% {
-			width: 100%;
-		}
-		100% {
-			width: 0;
-		}
-	}
-	@keyframes burgerBottom {
-		0% {
-			transform: translateY(0%) rotate(0deg);
-		}
-		100% {
-			transform: translateY(-200%) rotate(-45deg);
-		}
+	.menu__link {
+		opacity: 1;
+		display: block;
+		background-color: red;
+		width: 100%;
+		padding: var(--spacing-sm) 0;
+		margin-bottom: var(--spacing-xs);
 	}
 }
 
@@ -213,6 +210,16 @@ input[type='search'] {
 	/* 데스크탑 메인 메뉴 제어 버튼 */
 	.button--burger {
 		display: none;
+	}
+	/* 데스크탑 앱 네비게이션 */
+	.appNavigation {
+	}
+	.menu__list {
+		margin-left: auto;
+		margin-right: auto;
+		display: flex;
+		justify-content: space-between;
+		max-width: var(--container-width);
 	}
 }
 
