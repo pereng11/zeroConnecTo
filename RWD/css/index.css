@@ -177,6 +177,35 @@ input[type='search'] {
 	font-size: var(--text-xl);
 }
 
+/* 공통 새소식 */
+.news__date {
+	display: block;
+	text-align: right;
+	margin-top: var(--spacing-xs);
+}
+/* 반응형 iframe */
+.iframeWrapper {
+	position: relative;
+	width: 100%;
+	background-color: #000;
+	overflow: hidden;
+}
+.iframeRatio-4-3 {
+	padding-bottom: 56.25%;
+}
+.iframeRatio-16-9 {
+	padding-bottom: 75%;
+}
+.iframeWrapper iframe {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
 	/* 모바일 헤더 */
