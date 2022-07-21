@@ -86,19 +86,14 @@ input[type='search'] {
 	color: var(--secondary-color);
 	border: 1px solid currentColor;
 }
-/* 공통 앱 네비게이션 */
-.appNavigation {
-	background-color: var(--secondary-color);
-}
-.menu__list {
-	padding: var(--spacing-base) var(--spacing-md);
-}
+/* 공통 메인 메뉴 */
 .menu__link {
 	display: block;
-	background-color: red;
-	width: 100%;
-	padding: var(--spacing-sm);
+	padding: var(--spacing-xs);
+	font-size: var(--text-md);
+	font-weight: 700;
 }
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
 	body {
@@ -165,25 +160,25 @@ input[type='search'] {
 		top: 50%;
 		transform: translateY(-50%) rotate(-45deg);
 	}
-	/* 모바일 앱 네비게이션 */
-	.appNavigation {
+	/* 모바일 메인 메뉴 */
+	.menu {
 		position: fixed;
 		top: 0;
 		left: 0;
-		background-color: #aed57c;
-	}
-	.menu__list {
-		width: 75vw;
+		background-color: var(--accent-opacity-color);
+		width: 70vw;
 		height: 100vh;
-		padding: var(--spacing-xl);
+		backdrop-filter: blur(4px);
+		padding: var(--spacing-md);
+		transform: translateX(-150%);
+		transition: all 400ms;
 	}
-	.menu__link {
-		opacity: 1;
-		display: block;
-		background-color: red;
-		width: 100%;
-		padding: var(--spacing-sm) 0;
-		margin-bottom: var(--spacing-xs);
+	.menu__item {
+		border-bottom: 1px solid var(--silver);
+	}
+
+	.menu.is--active {
+		transform: none;
 	}
 }
 
@@ -211,15 +206,24 @@ input[type='search'] {
 	.button--burger {
 		display: none;
 	}
-	/* 데스크탑 앱 네비게이션 */
-	.appNavigation {
+	/* 데스크탑 메인 메뉴 */
+	.menu {
+		background-color: var(--secondary-color);
+		padding: var(--spacing-base) var(--spacing-md);
 	}
 	.menu__list {
+		max-width: var(--container-width);
 		margin-left: auto;
 		margin-right: auto;
 		display: flex;
+		flex-flow: row nowrap;
 		justify-content: space-between;
-		max-width: var(--container-width);
+		align-items: center;
+		padding: var(--spacing-md);
+	}
+	.menu__link {
+		color: var(--white);
+		text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
 	}
 }
 
