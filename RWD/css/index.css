@@ -147,6 +147,28 @@ input[type='search'] {
 .accentTwitter {
 	color: var(--accent-twitter);
 }
+
+/* 공통 추천 서적 */
+.book {
+	background-color: aquamarine;
+}
+.book__cover,
+.book__info {
+	text-align: center;
+}
+.book__info dt,
+.book__info dd {
+	display: inline-block;
+}
+.ratingStar {
+	display: block;
+}
+.book__coverCaption {
+	font-weight: 600;
+}
+.book__summary {
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
 	/* 모바일 헤더 */
