@@ -14,7 +14,7 @@
 	position: relative;
 	display: flex;
 	flex-flow: column nowrap;
-	padding: var(--spacing-base) var(--spacing-md);
+	padding: var(--spacing-base) var(--spacing-lg);
 	gap: var(--spacing-base);
 }
 
@@ -94,10 +94,61 @@ input[type='search'] {
 	font-weight: 700;
 }
 
+/* 공통 메인 콘텐츠 */
+.appMain {
+	padding: var(--spacing-base) var(--spacing-lg);
+}
+/* 공통 메인 콘텐츠 섹션 제목 */
+h2.sprite {
+	display: flow-root;
+	font-size: var(--text-md);
+	font-weight: 700;
+	margin-bottom: var(--spacing-sm);
+}
+.sprite::before {
+	float: left;
+	display: block;
+	content: '';
+	width: 58px;
+	height: 59px;
+	background-image: url(../images/sprite_main.png);
+	margin-right: var(--spacing-sm);
+}
+.sprite > span {
+	display: block;
+	font-size: var(--text-sm);
+	font-weight: 400;
+}
+.spriteNews::before {
+	background-position: 0 -230px;
+}
+.spriteBoard::before {
+	background-position: 0 -115px;
+}
+.spriteFavorite::before {
+	background-position: 0 -345px;
+}
+.spriteTwitter::before {
+	background-position: 0 -460px;
+}
+.book__enTitle {
+	color: var(--accent-book);
+}
+.news__enTitle {
+	color: var(--accent-news);
+}
+.board__enTitle {
+	color: var(--accent-board);
+}
+.favorite__enTitle {
+	color: var(--accent-favorite);
+}
+.twitter__enTitle {
+	color: var(--accent-twitter);
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
-	body {
-	}
 	/* 모바일 헤더 */
 	.appHeader {
 		background-color: var(--primary-color);
@@ -118,7 +169,7 @@ input[type='search'] {
 		overflow: hidden;
 		position: absolute;
 		top: 3.75rem;
-		right: var(--spacing-md);
+		right: var(--spacing-lg);
 		transform: translate(0.25rem, -0.25rem);
 	}
 	.button--burger {
@@ -169,7 +220,7 @@ input[type='search'] {
 		width: 70vw;
 		height: 100vh;
 		backdrop-filter: blur(4px);
-		padding: var(--spacing-md);
+		padding: var(--spacing-lg);
 		transform: translateX(-150%);
 		transition: all 400ms;
 	}
@@ -209,7 +260,7 @@ input[type='search'] {
 	/* 데스크탑 메인 메뉴 */
 	.menu {
 		background-color: var(--secondary-color);
-		padding: var(--spacing-base) var(--spacing-md);
+		padding: var(--spacing-base) var(--spacing-lg);
 	}
 	.menu__list {
 		max-width: var(--container-width);
@@ -224,6 +275,13 @@ input[type='search'] {
 	.menu__link {
 		color: var(--white);
 		text-shadow: 1px 1px 0 var(--black), -1px -1px 0 var(--black);
+	}
+	/* 데스크탑 메인 콘텐츠 */
+	.appMain {
+		max-width: var(--container-width);
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #ffc;
 	}
 }
 
