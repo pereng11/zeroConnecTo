@@ -239,6 +239,38 @@ input[type='search'] {
 	margin-top: var(--spacing-xs);
 }
 
+/* 공통 트위터 */
+.twitter__container {
+}
+.twitter__userInfo {
+	display: inline-flex;
+}
+.twitter__userId {
+	margin-left: var(--spacing-xs);
+}
+.twitter__userProfile {
+	float: right;
+	width: 7.188rem;
+	height: 7.188rem;
+	border-radius: 50%;
+	background-image: url(../assets/images/seulbinim.jpg);
+}
+.twitter__userProfileImage {
+	display: none;
+	border: 1px solid var(--black);
+	border-radius: 50%;
+}
+.twitter__summary {
+	overflow: visible;
+	text-overflow: clip;
+	word-break: break-all;
+}
+.twitter__date {
+	display: block;
+	font-weight: 600;
+	margin-top: var(--spacing-xs);
+}
+
 /* 모바일 디바이스 (Mobile Device) */
 @media (min-width: 320px) and (max-width: 768px) {
 	/* 모바일 헤더 */
