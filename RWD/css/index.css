@@ -153,8 +153,7 @@ input[type='search'] {
 }
 
 /* 공통 추천 서적 */
-.book {
-}
+
 .book__cover {
 	width: 70%;
 	margin-left: auto;
@@ -204,6 +203,38 @@ input[type='search'] {
 	right: 0;
 	width: 100%;
 	height: 100%;
+}
+
+/* 공통 게시판 */
+.board {
+	position: relative;
+}
+.board__item {
+	display: flex;
+	justify-content: space-between;
+}
+.board__link {
+	width: 75%;
+	padding: var(--spacing-xs);
+	margin-right: var(--spacing-xs);
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.board__date {
+	padding: var(--spacing-xs);
+}
+.board__more {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* 공통 인기사이트 */
+
+.favorite__link {
+	display: block;
+	padding: var(--spacing-xs);
 }
 
 /* 모바일 디바이스 (Mobile Device) */
@@ -289,6 +320,13 @@ input[type='search'] {
 
 	.menu.is--active {
 		transform: none;
+	}
+
+	/* 모바일 인기사이트 */
+
+	.favorite__link::after {
+		content: attr(data-tooltip);
+		color: var(--accent-favorite);
 	}
 }
 
