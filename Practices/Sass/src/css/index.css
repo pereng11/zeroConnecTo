@@ -1,0 +1,12 @@
+.box {
+  width: 200px;
+  margin-left: 200px;
+  background: #e96900 url("/assets/images/bg.jpg");
+  font-size: 10rem;
+}
+
+.box a {
+  width: 100%;
+  color: green;
+  font-size: 200px;
+}
