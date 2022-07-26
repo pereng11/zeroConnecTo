@@ -7,13 +7,18 @@
 }
 
 .box {
-	@include utils.mobile {
+	@include utils.media(desktop) {
 		background: #000;
 	}
 }
 
-@include utils.mobile {
-	.box {
-		background-color: yellow;
+.box {
+	@include utils.respond-until(lg) {
+		background: tomato;
 	}
+}
+
+.box {
+	@include utils.marginX(23px);
+	@include utils.boxSizeMinMax();
 }

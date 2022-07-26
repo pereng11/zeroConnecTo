@@ -1,1 +1,56 @@
 // mixin.scss
+@use './unit' as *;
+@use './variable' as *;
+
+// 여백 관련 mixin
+@mixin autoMargin {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin marginX($marginX) {
+	margin-left: rem($marginX);
+	margin-right: rem($marginX);
+}
+
+@mixin marginY($marginY) {
+	margin-top: rem($marginY);
+	margin-bottom: rem($marginY);
+}
+@mixin paddingX($paddingX) {
+	padding-left: rem($paddingX);
+	padding-right: rem($paddingX);
+}
+
+@mixin paddingY($paddingY) {
+	padding-top: rem($paddingY);
+	padding-bottom: rem($paddingY);
+}
+
+//position 관련 mixin
+@mixin pos($pos: absolute, $t: initial, $r: initial, $b: initial, $l: initial) {
+	position: $pos;
+	top: $t;
+	bottom: $b;
+	left: $l;
+	right: $r;
+}
+
+@mixin posCenterX($pos: absolute) {
+	@include pos($pos: $pos, $l: 50%);
+	transform: translateX(-50%);
+}
+@mixin posCenterY($pos: absolute) {
+	@include pos($pos: $pos, $t: 50%);
+	transform: translateY(-50%);
+}
+@mixin posCenter($pos: absolute) {
+	@include pos($pos: $pos, $t: 50%, $l: 50%);
+	transform: translate(-50%, -50%);
+}
+
+//박스의 최소 및 최대 너비를 설정하기 위한 mixin
+@mixin boxSizeMinMax($max: $container-width) {
+	max-width: $max;
+	@include autoMargin;
+}
