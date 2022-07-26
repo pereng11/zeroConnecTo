@@ -1,24 +1,4 @@
 // index.scss
 @use './base';
-@use './utils';
-
-.box {
-	@include utils.flexbox($j: center, $d: column);
-}
-
-.box {
-	@include utils.media(desktop) {
-		background: #000;
-	}
-}
-
-.box {
-	@include utils.respond-until(lg) {
-		background: tomato;
-	}
-}
-
-.box {
-	@include utils.marginX(23px);
-	@include utils.boxSizeMinMax();
-}
+@use './layout';
+@use './pages';
