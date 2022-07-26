@@ -1,1 +1,19 @@
 // index.scss
+@use './base';
+@use './utils';
+
+.box {
+	@include utils.flexbox($j: center, $d: column);
+}
+
+.box {
+	@include utils.mobile {
+		background: #000;
+	}
+}
+
+@include utils.mobile {
+	.box {
+		background-color: yellow;
+	}
+}
