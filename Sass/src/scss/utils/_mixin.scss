@@ -28,6 +28,12 @@
 	padding-bottom: rem($paddingY);
 }
 
+//transform 관련 믹스인
+@mixin transRotate($tx, $ty, $rotate) {
+	top: 50%;
+	transform: translate(#{$tx}+ '%', #{$ty}+ '%') rotate(#{$rotate}+ 'deg');
+}
+
 //position 관련 mixin
 @mixin pos($pos: absolute, $t: initial, $r: initial, $b: initial, $l: initial) {
 	position: $pos;

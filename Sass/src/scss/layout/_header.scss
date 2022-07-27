@@ -6,14 +6,28 @@
 	@include flexbox(column);
 	@include paddingX(24);
 	@include paddingY(16);
+
 	@include mobile {
+		position: relative;
 		background-color: $primary-color;
 	}
+
 	@include desktop {
 		position: relative;
 		background: $white;
 		@include boxSizeMax;
 		background: $yellow;
+	}
+
+	.buttonWrapper {
+		@include mobile {
+			@include pos($t: 52px, $r: 20px);
+			padding: rem(4);
+		}
+
+		@include desktop {
+			display: none;
+		}
 	}
 }
 

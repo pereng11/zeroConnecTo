@@ -404,16 +404,60 @@ legend {
   background-position: 0 -460px;
 }
 
+.buttonWrapper {
+  overflow: hidden;
+}
+
 .button {
-  border: 0;
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   height: 2rem;
   font-size: 0.875rem;
 }
+.button--none {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
 .button--fill {
   background: #988574;
   color: #fff;
+}
+
+.button--burger {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+.button--burgerBarTop, .button--burgerBarMiddle, .button--burgerBarBottom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: #fff;
+  border-radius: 0.5rem;
+  transition: all 200ms;
+}
+.button--burgerBarMiddle {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.button--burgerBarBottom {
+  top: 100%;
+  transform: translateY(-100%);
+}
+.button--burger.is--active .button--burgerBarTop {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(45deg);
+}
+.button--burger.is--active .button--burgerBarMiddle {
+  top: 50%;
+  transform: translate(-150%, -50%) rotate(0deg);
+}
+.button--burger.is--active .button--burgerBarBottom {
+  top: 50%;
+  transform: translate(0%, -50%) rotate(-45deg);
 }
 
 .formInput__input {
@@ -437,6 +481,7 @@ legend {
 }
 @media (max-width: 767px) {
   .appHeader {
+    position: relative;
     background-color: #38302e;
   }
 }
@@ -448,6 +493,21 @@ legend {
     margin-left: auto;
     margin-right: auto;
     background: #e8ca58;
+  }
+}
+@media (max-width: 767px) {
+  .appHeader .buttonWrapper {
+    position: absolute;
+    top: 52px;
+    right: 20px;
+    bottom: initial;
+    left: initial;
+    padding: 0.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .appHeader .buttonWrapper {
+    display: none;
   }
 }
 
