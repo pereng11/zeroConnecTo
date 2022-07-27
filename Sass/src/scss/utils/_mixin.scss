@@ -62,6 +62,11 @@
 	@include autoMargin;
 }
 
+@mixin boxCenter($w: 100%) {
+	width: $w;
+	@include autoMargin;
+}
+
 //말줄임표 mixin
 @mixin textEllipsis {
 	white-space: nowrap;
@@ -112,5 +117,19 @@
 @mixin textStyle($size) {
 	font-size: rem($size);
 	letter-spacing: -0.02em;
-	// line-height: 1.5;
+	line-height: 1.5;
+}
+
+@mixin textHeading($size) {
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	line-height: 1.4;
+	font-size: rem($size);
+}
+
+@mixin gridbox($column-count: 12, $gap: 20px) {
+	display: grid;
+	grid-template-columns: repeat($column-count, 1fr);
+	grid-template-rows: auto;
+	gap: rem($gap);
 }

@@ -1,0 +1,6 @@
+@use '../utils' as *;
+
+[class*='__title'] {
+	@include flexbox(column, center);
+	@include textHeading(18);
+}

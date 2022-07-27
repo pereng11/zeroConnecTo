@@ -1,1 +1,125 @@
-// home.scss
+@use 'sass:map';
+@use './../utils' as *;
+
+$sections: (
+	'.news': news,
+	'.book': book,
+	'.board': board,
+	'.favorite': favorite,
+	'.twitter': twitter,
+);
+
+.home {
+	[class*='__title'] {
+		margin-bottom: rem(16);
+	}
+	padding: rem(16) rem(24);
+
+	@include mobile {
+		@include flexbox(column);
+		gap: rem(16);
+	}
+
+	@include desktop {
+		@include boxSizeMax;
+		@include gridbox;
+		grid-template-areas:
+			'news news news news news news news news news news news news'
+			'book book book book favorite favorite favorite twitter twitter twitter twitter twitter'
+			'book book book book . board board board board board board board';
+
+		@each $sec, $secVal in $sections {
+			#{$sec} {
+				grid-area: $secVal;
+			}
+		}
+	}
+}
+
+.book {
+	&__cover {
+		@include boxCenter(70%);
+		text-align: center;
+	}
+	&__coverCaption {
+		margin-top: rem(16);
+	}
+	&__info {
+		@include marginY(10);
+		dt:first-child {
+			margin-right: rem(8);
+		}
+
+		@include flexbox($d: row, $j: center, $w: wrap);
+		.ratingStar {
+			width: 100%;
+			text-align: center;
+			font-size: rem(32);
+		}
+	}
+}
+
+.news {
+	.iframeWrapper {
+		@include responseIframe;
+	}
+	&__date {
+		display: block;
+		text-align: right;
+	}
+}
+.board {
+	position: relative;
+
+	&__more {
+		@include pos($t: 0, $r: 0);
+	}
+
+	&__item {
+		@include flexbox(row, space-between, center);
+	}
+
+	&__link {
+		@include textEllipsis;
+		max-width: 80%;
+		i {
+			margin-right: rem(16);
+		}
+	}
+}
+.favorite {
+	&__link::after {
+		content: attr(data-tooltip);
+		color: $accent-favorite;
+		font-size: rem(14);
+	}
+}
+.twitter {
+	&__userInfo {
+		display: inline-flex;
+	}
+	&__userProfile {
+		float: right;
+		width: 20%;
+		max-width: 110px;
+		max-height: 110px;
+	}
+	&__userProfileImage {
+		border-radius: 50%;
+		shape-outside: circle(50%);
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 30% 40%;
+	}
+}
+
+[class*='__summary'] {
+	@include textStyle(14);
+}
+
+.home > section,
+.home > article {
+	@include flexbox(column);
+	gap: rem(10);
+}

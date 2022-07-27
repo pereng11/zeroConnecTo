@@ -1,1 +1,52 @@
-// navigation.scss
+@use '../utils' as *;
+
+.menu {
+	padding: rem(40);
+
+	@include mobile {
+		@include pos(fixed, $t: 0, $l: 0);
+		background-color: rgba($orange, 0.85);
+		width: 70vw;
+		height: 100vh;
+		backdrop-filter: blur(2px);
+		transform: translateX(-150%);
+		transition: all 400ms;
+	}
+
+	@include desktop {
+		background-color: $secondary-color;
+	}
+
+	&__list {
+		@include desktop {
+			@include flexbox($j: space-between, $a: center);
+			@include autoMargin;
+			max-width: $container-width;
+		}
+	}
+
+	&__item {
+		@include mobile {
+			display: block;
+			width: 100%;
+			margin-top: rem(10);
+			border-bottom: 1px solid $silver;
+		}
+	}
+
+	&__link {
+		@include mobile {
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			padding: rem(8) 0;
+		}
+		@include desktop {
+			color: $white;
+			padding: rem(16) rem(24);
+		}
+	}
+	&.is--active {
+		transform: translateX(0%);
+	}
+}

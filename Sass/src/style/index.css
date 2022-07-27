@@ -386,7 +386,7 @@ legend {
   min-height: 3.75rem;
   background-image: url("./../assets/images/sprite_main.png");
   background-repeat: no-repeat;
-  padding-left: ren(64px);
+  padding-left: 4rem;
 }
 .spriteBook {
   background-position: 0 0;
@@ -469,6 +469,17 @@ legend {
   padding: 0.25rem 0.5rem;
 }
 
+[class*=__title] {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  font-size: 1.125rem;
+}
+
 .appHeader {
   display: flex;
   flex-flow: column nowrap;
@@ -547,6 +558,7 @@ legend {
     color: #fff;
     font-size: 0.875rem;
     letter-spacing: -0.02em;
+    line-height: 1.5;
   }
 }
 
@@ -634,6 +646,183 @@ legend {
 }
 .menu.is--active {
   transform: translateX(0%);
+}
+
+.appFooter {
+  background-color: #38302e;
+  color: #fff;
+  padding: 1rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .appFooter {
+    text-align: center;
+  }
+}
+
+.address {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .address {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}
+
+.home {
+  padding: 1rem 1.5rem;
+}
+.home [class*=__title] {
+  margin-bottom: 1rem;
+}
+@media (max-width: 767px) {
+  .home {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  .home {
+    max-width: 64rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 1.25rem;
+    grid-template-areas: "news news news news news news news news news news news news" "book book book book favorite favorite favorite twitter twitter twitter twitter twitter" "book book book book . board board board board board board board";
+  }
+  .home .news {
+    grid-area: news;
+  }
+  .home .book {
+    grid-area: book;
+  }
+  .home .board {
+    grid-area: board;
+  }
+  .home .favorite {
+    grid-area: favorite;
+  }
+  .home .twitter {
+    grid-area: twitter;
+  }
+}
+
+.book__cover {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.book__coverCaption {
+  margin-top: 1rem;
+}
+.book__info {
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.book__info dt:first-child {
+  margin-right: 0.5rem;
+}
+.book__info .ratingStar {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.news .iframeWrapper {
+  position: relative;
+  width: 100%;
+  height: 0 !important;
+  padding-top: 56.25%;
+}
+.news .iframeWrapper iframe {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.news__date {
+  display: block;
+  text-align: right;
+}
+
+.board {
+  position: relative;
+}
+.board__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: initial;
+}
+.board__item {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.board__link {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+.board__link i {
+  margin-right: 1rem;
+}
+
+.favorite__link::after {
+  content: attr(data-tooltip);
+  color: #eea60a;
+  font-size: 0.875rem;
+}
+
+.twitter__userInfo {
+  display: inline-flex;
+}
+.twitter__userProfile {
+  float: right;
+  width: 20%;
+  max-width: 110px;
+  max-height: 110px;
+}
+.twitter__userProfileImage {
+  border-radius: 50%;
+  shape-outside: circle(50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 30% 40%;
+}
+
+[class*=__summary] {
+  font-size: 0.875rem;
+  letter-spacing: -0.02em;
+  line-height: 1.5;
+}
+
+.home > section,
+.home > article {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 0.625rem;
 }
 
 .box {
