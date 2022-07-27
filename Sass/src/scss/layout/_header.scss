@@ -1,8 +1,11 @@
 //헤더
 @use './../utils' as *;
+@use './../components' as *;
 
 .appHeader {
 	@include flexbox(column);
+	@include paddingX(24);
+	@include paddingY(16);
 	@include mobile {
 		background-color: $primary-color;
 	}
@@ -10,6 +13,7 @@
 		position: relative;
 		background: $white;
 		@include boxSizeMax;
+		background: $yellow;
 	}
 }
 
@@ -20,8 +24,8 @@
 	}
 	&__link {
 		display: block;
-		$w: rem(204px);
-		$h: rem(59px);
+		$w: rem(204);
+		$h: rem(59);
 		width: $w;
 		height: $h;
 		@include bgRetina('webcafe-logo', 'png');
@@ -33,11 +37,14 @@
 	@include mobile {
 		order: -1;
 		color: $white;
-		@include textStyle(14px);
+		@include textStyle(14);
 	}
 }
 
+// 검색창
+
 .searchForm {
+	margin-top: rem(16);
 	&__group {
 		@include flexbox($j: flex-end);
 	}
@@ -46,11 +53,15 @@
 			flex-grow: 1;
 		}
 		@include desktop {
-			width: rem(400px);
+			width: rem(400);
 		}
 
 		&__input {
 			width: 100%;
 		}
+	}
+
+	.button--primary {
+		margin-left: rem(16);
 	}
 }
