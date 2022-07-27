@@ -79,3 +79,53 @@
 		margin-left: rem(16);
 	}
 }
+
+//앱 네비게이션
+
+.appNavigation {
+	padding: rem(40);
+
+	@include mobile {
+		@include pos(fixed, 0, $l: 0);
+		background-color: $accent-opacity-color;
+		width: 70vw;
+		height: 100vh;
+		backdrop-filter: blur(2px);
+		transform: translateX(-150%);
+		transition: all 400ms;
+
+		& .menu__item {
+			display: block;
+			width: 100%;
+			margin-top: rem(10);
+			border-bottom: 1px solid $silver;
+		}
+		& .menu__link {
+			font-weight: 500;
+			display: block;
+			width: 100%;
+			padding: rem(8) 0;
+		}
+	}
+	&.is--active {
+		transform: translateX(0%);
+	}
+
+	@include desktop {
+		background-color: $secondary-color;
+
+		& .menu__list {
+			@include flexbox($j: space-between, $a: center);
+			@include autoMargin;
+			max-width: $container-width;
+		}
+
+		& .menu__item {
+		}
+
+		& .menu__link {
+			color: $white;
+			padding: rem(16) rem(24);
+		}
+	}
+}
