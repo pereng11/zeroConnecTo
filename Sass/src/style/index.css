@@ -576,44 +576,31 @@ legend {
   margin-left: 1rem;
 }
 
-.appNavigation {
+.menu {
   padding: 2.5rem;
 }
 @media (max-width: 767px) {
-  .appNavigation {
+  .menu {
     position: fixed;
     top: 0;
     right: initial;
     bottom: initial;
     left: 0;
-    background-color: hsla(60deg, 50%, 50%, 0.85);
+    background-color: rgba(238, 166, 10, 0.85);
     width: 70vw;
     height: 100vh;
     backdrop-filter: blur(2px);
     transform: translateX(-150%);
     transition: all 400ms;
   }
-  .appNavigation .menu__item {
-    display: block;
-    width: 100%;
-    margin-top: 0.625rem;
-    border-bottom: 1px solid #767676;
-  }
-  .appNavigation .menu__link {
-    font-weight: 500;
-    display: block;
-    width: 100%;
-    padding: 0.5rem 0;
-  }
-}
-.appNavigation.is--active {
-  transform: translateX(0%);
 }
 @media (min-width: 768px) {
-  .appNavigation {
+  .menu {
     background-color: #988574;
   }
-  .appNavigation .menu__list {
+}
+@media (min-width: 768px) {
+  .menu__list {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -622,10 +609,31 @@ legend {
     margin-right: auto;
     max-width: 64rem;
   }
-  .appNavigation .menu__link {
+}
+@media (max-width: 767px) {
+  .menu__item {
+    display: block;
+    width: 100%;
+    margin-top: 0.625rem;
+    border-bottom: 1px solid #767676;
+  }
+}
+@media (max-width: 767px) {
+  .menu__link {
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+}
+@media (min-width: 768px) {
+  .menu__link {
     color: #fff;
     padding: 1rem 1.5rem;
   }
+}
+.menu.is--active {
+  transform: translateX(0%);
 }
 
 .box {
