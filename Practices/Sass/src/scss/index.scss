@@ -1,4 +1,6 @@
 @use 'utils' as *;
+@use './components/button';
+// @import '@euid/scss-mixins';
 
 .box {
 	width: $w;
@@ -9,5 +11,5 @@
 .box a {
 	width: 100%;
 	color: green;
-	font-size: 200px;
+	font-size: 2000px;
 }

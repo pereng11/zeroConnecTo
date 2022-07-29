@@ -1,0 +1,29 @@
+@use './color';
+
+//중앙정렬
+
+@mixin primaryFill() {
+	color: $grayscale-white;
+	background-color: $primary-blue1;
+}
+
+@mixin whiteFill() {
+	color: $primary-blue1;
+	background-color: $grayscale-white;
+}
+
+@mixin whiteOutline() {
+	color: $grayscale-white;
+	background-color: transparent;
+	border-color: $grayscale-white;
+}
+
+@mixin grayWhiteFill() {
+	color: transparent;
+	background-color: $grayscale-white;
+}
+
+@mixin blackFill() {
+	background-color: $grayscale-black;
+	color: $grayscale-lightgray;
+}
